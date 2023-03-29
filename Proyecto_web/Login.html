@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<!-- Link a la librería Font Awesome para agregar iconos -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Enlace al archivo de estilos -->
+	<link rel="stylesheet" href="./login.css">
+</head>
+<body>
+	<!-- Contenedor principal -->
+	<div class="background">
+		<!-- Logo -->
+		<img src="LOGO_rojo.png" alt="Logo" class="logo">
+        
+		<!-- Contenedor del formulario -->
+		<div class="container">
+            
+			<!-- Icono de usuario -->
+			<div class="user-icon">
+				<i class="fas fa-user"></i>
+			</div>
+            
+			<!-- Título del formulario -->
+			<h2 class="title">Login</h2>
+            
+			<!-- Formulario de inicio de sesión -->
+			<form class="form" method="POST" action="Home.html">
+                
+				<!-- Campo de entrada de usuario -->
+				<label for="username">Usuario</label>
+				<input type="text" id="username" class="input" autocomplete="off" placeholder="cev" tabindex="1" required />
+                
+				<!-- Campo de entrada de contraseña -->
+				<label for="password">Contraseña</label>
+				<div class="password-container">
+					<input type="password" id="password" class="input" autocomplete="off" placeholder="contraseña" tabindex="2" required />
+					<button type="button" class="password-toggle-btn">
+                        
+						<!-- Icono para alternar la visibilidad de la contraseña -->
+						<i class="far fa-eye"></i>
+					</button>
+				</div>
+				<!-- Botón de envío del formulario -->
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+	<!-- Script para alternar la visibilidad de la contraseña -->
+	<script>
+		const passwordToggleBtn = document.querySelector('.password-toggle-btn');
+		const passwordInput = document.querySelector('#password');
+		passwordToggleBtn.addEventListener('click', () => {
+			if (passwordInput.type === 'password') {
+				passwordInput.type = 'text';
+			} else {
+				passwordInput.type = 'password';
+			}
+		});
+	</script>
+</body>
+</html>

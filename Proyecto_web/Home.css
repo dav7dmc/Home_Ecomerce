@@ -1,0 +1,292 @@
+
+/* Estilo del contenedor principal */
+.container {
+    margin: 0; /* Eliminamos el margen */
+    width: 100%; /* Le damos un ancho del 100% */
+}
+
+/* Alinea todos los elementos de la barra de navegación en una sola fila horizontal */
+.main-nav {
+	text-align: center;
+  
+  justify-content: space-between;
+  align-items: center;
+}
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Seleccionamos los elementos li dentro del menú que no tengan la clase main-nav__item--search ni la clase main-nav__item--cart y les damos un margen y un relleno */
+#menu li:not(.main-nav__item--search):not(.main-nav__item--cart) {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* Seleccionamos los elementos a dentro del menú y les damos un color blanco y un estilo de texto sin subrayado */
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#menu li:last-child {
+  margin-right: 0;
+	}
+
+/* Ajusta el ancho de los elementos de la lista */
+#menu li {
+  flex: 1;
+  text-align: center;
+}
+
+/* Añade un margen a los elementos de la lista */
+#menu li:not(.logo) {
+  margin-left: 20px;
+}
+	
+	
+/* Reduce el tamaño del logo */
+.logo img {
+  max-height: 50px;
+	max-width: 100px;
+}
+nav {
+  background-color: black;
+}
+
+nav ul li a {
+  color: white;
+}
+
+/* Seleccionamos el elemento con la clase main-nav__item--search y le damos un margen izquierdo automático para que se alinee a la derecha */
+.main-nav__item--search {
+  margin-left: auto;
+}
+
+/* Seleccionamos el elemento input dentro del elemento con la clase main-nav__item--search y le damos un ancho de 200px y un relleno de 5px */
+.main-nav__item--search input {
+  width: 200px;
+  padding: 5px;
+}
+
+/* Seleccionamos el elemento button dentro del elemento con la clase main-nav__item--search y le damos un relleno de 5px y un color de fondo negro */
+.main-nav__item--search button {
+  padding: 5px;
+  background-color: black;
+}
+
+/* Seleccionamos el elemento i dentro del elemento con la clase main-nav__item--search y le damos un color blanco */
+.main-nav__item--search i {
+  color: white;
+}
+
+/* Seleccionamos el elemento con la clase main-nav__item--cart y le damos un margen izquierdo de 10px */
+.main-nav__item--cart {
+  margin-left: 10px;
+}
+
+/* Seleccionamos el elemento i dentro del elemento con la clase main-nav__item--cart y le damos un color blanco y un tamaño de fuente de 20px */
+.main-nav__item--cart i {
+  color: white;
+  font-size: 20px;
+}
+
+/* Estilos para el contenedor de búsqueda */
+.navbar-search input[type="search"]:focus {
+  width: 100%;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 80%;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Agrega esta regla CSS para solucionar el problema de la lupa */
+.search-container i {
+  display: inline-block;
+}
+
+
+
+/* Estilo de la sección de productos */
+#products {
+    margin-top: 40px; /* Margen superior de 40px */
+}
+
+/* Estilo del título de la sección de productos */
+#products h2 {
+    text-align: center;
+    font-size: 28px;
+    color: red;
+}
+
+/* Estilo de la tabla de productos */
+#products .products-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    gap: 20px 0; /* Espacio solo entre filas de 20 px*/
+	margin-top: 20px; /* Margen superior de 20px */
+    max-height: 1600px; /* Altura máxima del elemento */
+    margin: 0 auto; /* Margen lateral automático */
+    margin: 20px, auto; /* Margen superior e inferior de 20 px y margen lateral automático */
+}
+
+/* Estilo de las tarjetas de producto */
+.product-card {
+    width: 300px; /* Ancho fijo de 300px */ 
+	height: 400px; /* Altura fija de 400px */ 
+	border: 1px solid red; /* Borde rojo */ 
+	border-radius: 10px; /* Borde redondeado de 10px */
+	box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.1); /* Sombra roja suave */ 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+    flex-basis: calc(33.33% - 20px); /* Tamaño inicial de cada elemento con margen */
+    margin: 0.2%; /* Margen de 10px entre las tarjetas */
+}
+
+/* Estilo de la fila de tarjetas */
+.product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0; /* Margen de 20px arriba y abajo */
+}
+
+    /* Estilo de las imágenes de los productos */
+    .product-card img {
+        width: 200px; /* Ancho fijo de 200px */
+		height: auto; /* Altura proporcional al ancho */ 
+		object-fit: cover; /* Ajustar la imagen al tamaño del contenedor */ 
+		border-radius: 10px; /* Borde redondeado de 10px */
+    }
+
+    /* Estilo del título de los productos */
+    .product-card h3 {
+        font-size: 20px;
+	}
+
+        /* Estilo del botón de agregar al carrito */
+        .button_2 {
+            width: 200 px; /* Ancho fijo de 200 px*/ 
+			height: auto; /* Altura proporcional al ancho*/
+			background-color: red; /* Color rojo*/ 
+			color: white; /* Color blanco*/ 
+			border: none; /* Sin borde*/
+}
+			
+
+
+/* Estilos para los botones de filtro */
+.filter-button {
+  display: flex;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.filter-button:hover {
+  background-color: #3e8e41;
+}
+
+/* Oculta los productos que no corresponden al filtro seleccionado */
+.hide {
+  display: none;
+}
+
+
+
+
+/* Pie de pagina */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+/* cambiar el color del enlace de correo electrónico */
+.contact-info a {
+  color: #f00;
+}
+
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.social-media li:last-child {
+  margin-right: 0;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media a i {
+  font-size: 20px;
+  margin-right: 5px;
+  color: #fff;
+}
+
+.social-media a:hover {
+  color: #fff;
+}
+
+.social-media a:hover i {
+  color: #f00;
+}
+
+.footer-label {
+  color: #f00;
+  font-weight: bold;
+  margin-right: 5px;
+}
